@@ -1,8 +1,413 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--
+  Customized from "Hyperspace" by HTML5 UP
+  https://html5up.net | @ajlkn
+  License: CCA 3.0 (html5up.net/license)
+-->
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Test</title>
-<style>body{font:16px system-ui, sans-serif; margin:2rem} header{background:#1f7a8c;color:#fff;padding:1rem;border-radius:.5rem}</style>
-<header><h1>Página Web Test Alaia Ensemble 🎉 En construcción </h1></header>
-<p>If you can read this, GitHub Pages is serving your HTML.</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Valle Varo — Researcher</title>
+  <meta name="description" content="Valle Varo — theoretical physics, gauge theories, quantum simulation, covariant phase space." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <style>
+    /* Minimal overrides for a clean academic look */
+    :root { --accent: #1f7a8c; }
+    #intro .inner { max-width: 900px; }
+    .profile-block {
+      display: grid; grid-template-columns: 160px 1fr; gap: 1.5rem; align-items: start;
+    }
+    .profile-block img {
+      width: 160px; height: 160px; object-fit: cover; border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .quick-links a { margin-right: .75rem; white-space: nowrap; }
+    .affil { line-height: 1.35; }
+    .section-title { margin-bottom: .75rem; }
+    .pubs { list-style: none; padding-left: 0; }
+    .pubs li { margin: .6rem 0; }
+    .pubs li .venue { opacity: .8; }
+    .tags { font-size: .9em; opacity: .85; }
+    .teaching-list, .students-list { list-style: none; padding-left: 0; }
+    .teaching-list li, .students-list li { margin: .4rem 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .75rem;
+    }
+    .gallery-grid a { display:block; }
+    .gallery-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 4px; }
+    #lightbox[hidden] { display:none; }
+    #lightbox {
+      position: fixed; inset: 0; background: rgba(0,0,0,.85); z-index: 9999;
+      display: grid; place-items: center; padding: 2rem;
+    }
+    .lb-inner { position: relative; max-width: 90vw; max-height: 90vh; }
+    .lb-image { max-width: 90vw; max-height: 80vh; display:block; border-radius: 6px; }
+    .lb-close, .lb-prev, .lb-next {
+      position: absolute; top: -42px; background: #fff; border: 0; padding: .4rem .6rem; cursor: pointer;
+      border-radius: 4px; font-weight: 600;
+    }
+    .lb-close { right: 0; }
+    .lb-prev { left: 0; }
+    .lb-next { right: 70px; }
+    .lb-counter { position:absolute; top:-36px; left:50%; transform:translateX(-50%); color:#fff; font-weight:600; }
+
+    @media (max-width: 680px) {
+      .profile-block { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .lb-prev, .lb-next, .lb-close { top: -48px; }
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Sidebar -->
+  <section id="sidebar" aria-label="Site navigation">
+    <div class="inner">
+      <nav>
+        <ul>
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#collaborations">Collaborations</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Intro / Home -->
+    <section id="intro" class="wrapper style1 fade-up">
+      <div class="inner">
+        <div class="profile-block">
+          <img src="images/unnamed.png" alt="Portrait of Valle Varo" />
+          <div>
+            <h1 class="section-title">Valle Varo</h1>
+            <p class="tags">Applied Mathematics</p>
+            <p class="affil">
+              Researcher and assistant professor<br/>
+              Gauge theories - High energy physics - Gravity
+            </p>
+            <p class="quick-links">
+              <a class="button small" href="https://inspirehep.net/authors/1981581" target="_blank" rel="noopener">INSPIRE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="wrapper style2 fade-up">
+      <div class="inner">
+        <h3>1. Gauge Theories and High-Energy Physics</h3>
+        <p>
+          My work begins with the geometry of gauge fields: connections on principal bundles,
+          symmetry reduction, and the role of fibre bundles in classical and quantum field theory.
+          I am particularly interested in the interplay between gauge invariance, constraint
+          surfaces, and the structure of conserved quantities.
+        </p>
+
+        <h3>2. Quantum Simulation</h3>
+        <p>
+          I explore how gauge and gravitational systems can be simulated
+          on noisy quantum devices. My focus is on hybrid quantum–classical pipelines,
+          error mitigation strategies, and the implementation of geometric constraints
+          in controllable experimental settings. This connects the abstract structure of
+          field theory with realizations in atomic, optical, and superconducting platforms.
+        </p>
+
+        <h3>3. Covariant Phase Space with Boundaries</h3>
+        <p>
+          I study the geometric formulation of field theories on manifolds with boundary,
+          focusing on the covariant phase space and its symplectic structure.
+          This includes questions about surface charges, asymptotic symmetries,
+          and the boundary degrees of freedom that appear in gauge theories.
+        </p>
+      </div>
+    </section>
+
+    <!-- Collaborations -->
+    <section id="collaborations" class="wrapper style1 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Collaborations</h2>
+        <p>
+          I actively collaborate with several research groups working at the interface of
+          theoretical physics, quantum technologies, and simulation.
+        </p>
+        <ul class="collab-list">
+          <li>
+            <a href="https://scala.uc3m.es/ftsm/" target="_blank" rel="noopener"><strong>FTSM Group</strong></a>,
+            Universidad Carlos III de Madrid — <em>Fundamental Theories and Statistical Mechanics</em>.
+          </li>
+          <li>
+            <a href="http://tp.lc.ehu.es/Grupos%20de%20investigacion.htm" target="_blank" rel="noopener"><strong>Theoretical Physics Group</strong></a>,
+            Universidad del País Vasco (UPV/EHU) — <em>Quantum fields, gravity, and geometry</em>.
+          </li>
+          <li>
+            <a href="https://www.tecnalia.com/tecnologias/cuantica" target="_blank" rel="noopener"><strong>Tecnalia Quantum Technologies</strong></a> —
+            <em>Quantum simulation and computing technologies</em>.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="wrapper style1 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Latest Publications</h2>
+        <ul class="pubs"></ul>
+      </div>
+    </section>
+
+
+    <!-- Teaching -->
+    <section id="teaching" class="wrapper style1 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Teaching</h2>
+        <ul class="teaching-list">
+          <li>
+            <strong>Introduction to Artificial Intelligence</strong> (BSc, 2024–present, Universidad de Deusto, 3rd year Computer Science & AI)
+          </li>
+          <li>
+            <strong>Advanced Information Modelling</strong> (BSc, 2024–present, Universidad de Deusto, 3rd year Computer Science & AI)
+          </li>
+          <li>
+            <strong>Data Science</strong> (BSc, 2024–present, Universidad de Deusto, 3rd year Computer Science & AI, 2nd semester)
+          </li>
+          <li>
+            <strong>Unsupervised and Forecasting Models in AI</strong> (BSc, 2024–present, Universidad de Deusto, 3rd year Computer Science & AI, 2nd semester)
+          </li>
+          <li>
+            <strong>Big Data</strong> (BSc, 2024–2025, Universidad de Deusto)
+          </li>
+          <li>
+            <strong>Statistics and Probability</strong> (BSc, Universidad de Comillas, 3rd year Industrial Engineering)
+          </li>
+          <li>
+            <strong>Advanced Machine Learning</strong> (BSc, Universidad de Comillas, 4th year Industrial Engineering)
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrapper style3 fade-up">
+      <div class="inner">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <p><strong>Email</strong><br/>
+            <a href="mailto:m.varo@deusto.es">m.varo@deusto.es</a></p>
+            <p><strong>Office</strong><br/>
+            Universidad de Deusto<br/>
+            20014 Donostia, Spain</p>
+          </div>
+          <div>
+            <p><strong>Links</strong><br/>
+              <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> ·
+              <a href="https://orcid.org/0000-0002-6524-4298" target="_blank" rel="noopener">ORCID</a> ·
+              <a href="https://arxiv.org/search/gr-qc?searchtype=author&amp;query=Varo%2C+V" target="_blank" rel="noopener">arXiv</a> ·
+              <a href="https://inspirehep.net/authors/1981581" target="_blank" rel="noopener">INSPIRE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /#wrapper -->
+
+  <!-- Footer -->
+  <footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+      <ul class="menu">
+        <li>&copy; Valle Varo. All rights reserved.</li>
+        <li>Theme: <a href="https://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts (keep at the end for HTML5 UP). If you add custom JS, place it AFTER these and BEFORE </body>. -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Publications loader (custom) -->
+  <script>
+  /**
+   * Load latest publications from INSPIRE for author recid 1981581.
+   * Uses the official REST API with field filtering to keep payload small.
+   */
+  async function loadPublications() {
+    const ul = document.querySelector('.pubs');
+    if (!ul) return;
+
+    const params = new URLSearchParams({
+      q: 'authors.recid:1981581',
+      sort: 'mostrecent',
+      size: '10',
+      fields: [
+        'titles',
+        'authors.full_name',
+        'publication_info',
+        'preprint_date',
+        'arxiv_eprints',
+        'dois',
+        'links',
+        'citation_count',
+        'document_type',
+        'earliest_date'
+      ].join(',')
+    });
+
+    const endpoint = `https://inspirehep.net/api/literature?${params.toString()}`;
+
+    const get = (obj, path, fallback = undefined) =>
+      path.reduce((acc, key) => (acc && acc[key] != null ? acc[key] : undefined), obj) ?? fallback;
+
+    ul.innerHTML = '<li>Loading from INSPIRE…</li>';
+
+    try {
+      const res = await fetch(endpoint);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const records = get(data, ['hits','hits'], []);
+
+      if (!records.length) {
+        ul.innerHTML = '<li>No records found on INSPIRE.</li>';
+        return;
+      }
+
+      ul.innerHTML = '';
+      records.forEach(rec => {
+        const md = rec.metadata || {};
+        const title = get(md, ['titles', 0, 'title'], '(untitled)');
+        const authors = (md.authors || []).map(a => a.full_name).join(', ');
+        const year =
+          get(md, ['publication_info', 0, 'year']) ||
+          (get(md, ['preprint_date']) || get(md, ['earliest_date']) || '').slice(0,4) ||
+          '';
+
+        const pi = get(md, ['publication_info', 0], {});
+        const journal = pi.journal_title || '';
+        const volume = pi.journal_volume || '';
+        const page = pi.page_start || pi.artid || '';
+        const venueBits = [journal, volume, page].filter(Boolean).join(' ');
+        const venue = venueBits ? `${venueBits} (${year})` : (year ? `(${year})` : '');
+
+        const arxivId = get(md, ['arxiv_eprints', 0, 'value']);
+        const arxivLink = arxivId ? `<a href="https://arxiv.org/abs/${arxivId}" target="_blank" rel="noopener">arXiv:${arxivId}</a>` : '';
+        const doi = get(md, ['dois', 0, 'value']);
+        const doiLink = doi ? `<a href="https://doi.org/${doi}" target="_blank" rel="noopener">DOI</a>` : '';
+        const pdfLink = (md.links || []).find(l => l.type === 'fulltext');
+        const pdfA = pdfLink ? `<a href="${pdfLink.url}" target="_blank" rel="noopener">PDF</a>` : '';
+
+        const cites = typeof md.citation_count === 'number' ? md.citation_count : null;
+        const citeBadge = cites != null ? `<span class="tags">• ${cites} citation${cites === 1 ? '' : 's'}</span>` : '';
+
+        const docType = Array.isArray(md.document_type) && md.document_type.length
+          ? `<span class="tags">• ${md.document_type[0]}</span>` : '';
+
+        ul.insertAdjacentHTML('beforeend', `
+          <li>
+            <strong>${title}</strong>
+            ${venue ? ` — <span class="venue">${venue}</span>` : ''}
+            <br>
+            <span class="authors">${authors}</span>
+            <br>
+            ${[arxivLink, doiLink, pdfA].filter(Boolean).join(' · ')}
+            ${citeBadge} ${docType}
+          </li>
+        `);
+      });
+    } catch (err) {
+      console.error('INSPIRE fetch failed:', err);
+      ul.innerHTML = `
+        <li>
+          Couldn’t load from INSPIRE right now.
+          <a href="https://inspirehep.net/authors/1981581" target="_blank" rel="noopener">Open profile</a>.
+        </li>`;
+    }
+  }
+  document.addEventListener('DOMContentLoaded', loadPublications);
+  </script>
+
+  <!-- Lightweight lightbox for #gallery (custom) -->
+  <script>
+  (function initGallery(){
+    const grid = document.querySelector('#gallery .gallery-grid');
+    const box  = document.getElementById('lightbox');
+    if (!grid || !box) return;
+
+    const img  = box.querySelector('.lb-image');
+    const btnC = box.querySelector('.lb-close');
+    const btnP = box.querySelector('.lb-prev');
+    const btnN = box.querySelector('.lb-next');
+    const counter = box.querySelector('.lb-counter');
+
+    const items = Array.from(grid.querySelectorAll('.gallery-item'));
+    let idx = 0;
+
+    function open(i){
+      idx = (i+items.length)%items.length;
+      const a = items[idx];
+      const full = a.dataset.full || a.getAttribute('href');
+      const alt = a.querySelector('img')?.alt || '';
+      img.src = full; img.alt = alt;
+      counter.textContent = (idx+1) + ' / ' + items.length;
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function close(){
+      box.hidden = true;
+      img.src = ''; img.alt = '';
+      document.body.style.overflow = '';
+    }
+    function next(){ open(idx+1); }
+    function prev(){ open(idx-1); }
+
+    grid.addEventListener('click', (e)=>{
+      const a = e.target.closest('.gallery-item');
+      if (!a) return;
+      e.preventDefault();
+      open(items.indexOf(a));
+    });
+
+    btnC.addEventListener('click', close);
+    btnN.addEventListener('click', next);
+    btnP.addEventListener('click', prev);
+
+    box.addEventListener('click', (e)=> { if (e.target === box) close(); });
+    window.addEventListener('keydown', (e)=>{
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight') next();
+      else if (e.key === 'ArrowLeft') prev();
+    }, {passive:true});
+
+    // Basic swipe support
+    let sx=0;
+    img.addEventListener('touchstart', e=> sx = e.touches[0].clientX, {passive:true});
+    img.addEventListener('touchend', e=>{
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) (dx<0 ? next() : prev());
+    }, {passive:true});
+  })();
+  </script>
+
+</body>
+</html>
